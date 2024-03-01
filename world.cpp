@@ -4,7 +4,7 @@
 
 enum Environment
 {
-    YING,
+    YIN,
     YANG
 };
 
@@ -38,7 +38,7 @@ int main()
 
         if (player_action == Action::ATTACK && enemy_action == Action::MAGIC)
         {
-            if (getEnvironment() == YING)
+            if (getEnvironment() == YIN)
             {
                 player.take_damage(enemy.get_attack_strength() * 2);
                 enemy.take_damage(player.get_attack_strength());
@@ -94,7 +94,7 @@ int main()
 
         if (player_action == Action::MAGIC && enemy_action == Action::ATTACK)
         {
-            if (getEnvironment() == YING)
+            if (getEnvironment() == YIN)
             {
                 player.take_damage(enemy.get_attack_strength());
                 enemy.take_damage(player.get_attack_strength() / 2);
@@ -111,7 +111,7 @@ int main()
 
         if (player_action == Action::MAGIC && enemy_action == Action::MAGIC)
         {
-            if (getEnvironment() == YING)
+            if (getEnvironment() == YIN)
             {
                 player.take_damage(enemy.get_attack_strength() * 2);
                 enemy.take_damage(player.get_attack_strength() / 2);
